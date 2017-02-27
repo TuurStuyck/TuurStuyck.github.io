@@ -1,7 +1,7 @@
-<manifest alg="2" build="2015.1.0.342" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive" exportTarget="other" domain="https://perswww.kuleuven.be/~u0085928" resolutions="1x" timestamp="1488029277106">
+<manifest alg="2" build="2015.1.0.342" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive" exportTarget="other" domain="https://perswww.kuleuven.be/~u0085928" resolutions="1x" timestamp="1488201338121">
   <folder name="css">
     <file name="site_global.css" crc="528954566"/>
-    <file name="index.css" crc="241934168" ref="index"/>
+    <file name="index.css" crc="3861378535" ref="index"/>
     <file name="iefonts_index.css" crc="4282668537" ref="index"/>
   </folder>
   <folder name="assets">
@@ -29,5 +29,5 @@
     <file name="pixar-crop-u3759.jpg" crc="134234578" ref="index"/>
     <file name="wdas.jpg" crc="136447231" seo="true" ref="index"/>
   </folder>
-  <file name="index.html" crc="4251218571" seo="true" mt="1488029261521" redirect="true"/>
+  <file name="index.html" crc="394094489" seo="true" mt="1488201314072" redirect="true"/>
 </manifest>
