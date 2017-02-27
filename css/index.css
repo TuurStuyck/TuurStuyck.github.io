@@ -1,7 +1,7 @@
 .version.index /* version checker */
 {
-	color: #00000E;
-	background-color: #6B9F58;
+	color: #0000E6;
+	background-color: #27F5E7;
 }
 
 #muse_css_mq
@@ -65,7 +65,7 @@
 	position: fixed;
 	top: 15px;
 	left: 50%;
-	margin-left: -555px;
+	margin-left: -479px;
 }
 
 .js #u3745-4.ose_pre_init
