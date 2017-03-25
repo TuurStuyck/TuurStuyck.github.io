@@ -1,8 +1,8 @@
-<manifest alg="2" build="2015.1.0.342" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive" exportTarget="other" domain="https://perswww.kuleuven.be/~u0085928" resolutions="1x" timestamp="1488201338121">
+<manifest alg="2" build="2015.1.0.342" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive" exportTarget="other" domain="https://perswww.kuleuven.be/~u0085928" resolutions="1x" timestamp="1490426561835">
   <folder name="css">
     <file name="site_global.css" crc="528954566"/>
-    <file name="index.css" crc="3861378535" ref="index"/>
-    <file name="iefonts_index.css" crc="4282668537" ref="index"/>
+    <file name="index.css" crc="454008248" ref="index"/>
+    <file name="iefonts_index.css" crc="4285384096" ref="index"/>
   </folder>
   <folder name="assets">
     <file name="talkoilpaint.pdf" crc="4261129400" seo="true" mt="1462258262000"/>
@@ -27,7 +27,6 @@
     <file name="adobe_logo.jpg" crc="473072779" seo="true" ref="index"/>
     <file name="langsel.png" crc="3923441240" seo="true" ref="index"/>
     <file name="pixar-crop-u3759.jpg" crc="134234578" ref="index"/>
-    <file name="wdas.jpg" crc="136447231" seo="true" ref="index"/>
   </folder>
-  <file name="index.html" crc="394094489" seo="true" mt="1488201314072" redirect="true"/>
+  <file name="index.html" crc="454584530" seo="true" mt="1490426556233" redirect="true"/>
 </manifest>
