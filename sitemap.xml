@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://perswww.kuleuven.be/~u0085928/assets/talkoilpaint.pdf</loc>
-    <lastmod>2016-05-03</lastmod>
+    <loc>https://perswww.kuleuven.be/~u0085928/index.html</loc>
+    <lastmod>2017-10-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <image:image>
+      <image:loc>https://perswww.kuleuven.be/~u0085928/images/sf.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://perswww.kuleuven.be/~u0085928/images/kuleuven.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://perswww.kuleuven.be/~u0085928/images/adobe_logo.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://perswww.kuleuven.be/~u0085928/images/langsel.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://perswww.kuleuven.be/~u0085928/images/pixar-crop-u3759.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://perswww.kuleuven.be/~u0085928/assets/fluidcontrolabstract.pdf</loc>
@@ -19,6 +34,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://perswww.kuleuven.be/~u0085928/assets/talkoilpaint.pdf</loc>
+    <lastmod>2016-05-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://perswww.kuleuven.be/~u0085928/assets/oilpaint_low_res.pdf</loc>
     <lastmod>2016-09-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -27,36 +48,6 @@
   <url>
     <loc>https://perswww.kuleuven.be/~u0085928/assets/slides_oilpaint_lowres.pdf</loc>
     <lastmod>2016-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://perswww.kuleuven.be/~u0085928/images/sf.jpg</loc>
-    <lastmod>2017-04-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://perswww.kuleuven.be/~u0085928/images/kuleuven.jpg</loc>
-    <lastmod>2017-04-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://perswww.kuleuven.be/~u0085928/images/adobe_logo.jpg</loc>
-    <lastmod>2017-04-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://perswww.kuleuven.be/~u0085928/images/langsel.png</loc>
-    <lastmod>2017-04-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://perswww.kuleuven.be/~u0085928/index.html</loc>
-    <lastmod>2017-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
