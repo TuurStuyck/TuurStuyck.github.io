@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://perswww.kuleuven.be/~u0085928/index.html</loc>
-    <lastmod>2017-12-03</lastmod>
+    <lastmod>2018-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -10,6 +10,9 @@
     </image:image>
     <image:image>
       <image:loc>https://perswww.kuleuven.be/~u0085928/images/kuleuven.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://perswww.kuleuven.be/~u0085928/images/oculus_rift_logo_detail.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://perswww.kuleuven.be/~u0085928/images/adobe_logo.jpg</image:loc>
