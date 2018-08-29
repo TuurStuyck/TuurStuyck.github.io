@@ -1,4 +1,4 @@
-<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://perswww.kuleuven.be/~u0085928" resolutions="1x" timestamp="1535158648174">
+<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://perswww.kuleuven.be/~u0085928" resolutions="1x" timestamp="1535511765538">
   <folder name="css">
     <file name="site_global.css" crc="4262116224"/>
     <file name="index.css" crc="4117733356" ref="index"/>
@@ -44,5 +44,5 @@
       <caption webpage="index" alt=""/>
     </file>
   </folder>
-  <file name="index.html" crc="27229329" seo="true" mt="1535158642894" redirect="true"/>
+  <file name="index.html" crc="297494949" seo="true" mt="1535511752581" redirect="true"/>
 </manifest>
