@@ -1,8 +1,8 @@
-<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://perswww.kuleuven.be/~u0085928" resolutions="1x" timestamp="1536114302249">
+<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://perswww.kuleuven.be/~u0085928" resolutions="1x" timestamp="1537134649957">
   <folder name="css">
     <file name="site_global.css" crc="4262116224"/>
-    <file name="index.css" crc="34086392" ref="index"/>
-    <file name="iefonts_index.css" crc="3763529562" ref="index"/>
+    <file name="index.css" crc="205002623" ref="index"/>
+    <file name="iefonts_index.css" crc="155617189" ref="index"/>
   </folder>
   <folder name="assets">
     <file name="talkoilpaint.pdf" crc="4261129400" seo="true" mt="1462258262000"/>
@@ -10,6 +10,7 @@
     <file name="talkfluidsculpting.pdf" crc="325670058" seo="true" mt="1464263410000"/>
     <file name="slides_oilpaint_lowres.pdf" crc="11474395" seo="true" mt="1474288528000"/>
     <file name="oilpaint_low_res.pdf" crc="443736656" seo="true" mt="1474285857000"/>
+    <file name="resumetuurstuyck.pdf" crc="3962414771" seo="true" mt="1537134530000"/>
   </folder>
   <folder name="scripts">
     <file name="jquery-1.8.3.min.js" crc="209076791" ref="index"/>
@@ -44,5 +45,5 @@
       <caption webpage="index" alt=""/>
     </file>
   </folder>
-  <file name="index.html" crc="4248727534" seo="true" mt="1536114296663" redirect="true"/>
+  <file name="index.html" crc="412933020" seo="true" mt="1537134640221" redirect="true"/>
 </manifest>
