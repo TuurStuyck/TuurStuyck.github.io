@@ -1,7 +1,7 @@
-<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://perswww.kuleuven.be/~u0085928" resolutions="1x" timestamp="1537134649957">
+<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://perswww.kuleuven.be/~u0085928" resolutions="1x" timestamp="1538702561601">
   <folder name="css">
     <file name="site_global.css" crc="4262116224"/>
-    <file name="index.css" crc="205002623" ref="index"/>
+    <file name="index.css" crc="104264734" ref="index"/>
     <file name="iefonts_index.css" crc="155617189" ref="index"/>
   </folder>
   <folder name="assets">
@@ -44,6 +44,9 @@
     <file name="pixar-crop-u3759.jpg" crc="3179147" seo="true" ref="index">
       <caption webpage="index" alt=""/>
     </file>
+    <file name="coverstuycksmall.jpg" crc="4016431106" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
   </folder>
-  <file name="index.html" crc="412933020" seo="true" mt="1537134640221" redirect="true"/>
+  <file name="index.html" crc="342602395" seo="true" mt="1538702548043" redirect="true"/>
 </manifest>

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://perswww.kuleuven.be/~u0085928/index.html</loc>
-    <lastmod>2018-09-16</lastmod>
+    <lastmod>2018-10-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -22,6 +22,9 @@
     </image:image>
     <image:image>
       <image:loc>https://perswww.kuleuven.be/~u0085928/images/pixar-crop-u3759.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://perswww.kuleuven.be/~u0085928/images/coverstuycksmall.jpg</image:loc>
     </image:image>
   </url>
   <url>
