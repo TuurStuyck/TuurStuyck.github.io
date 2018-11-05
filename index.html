@@ -16,7 +16,7 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
   <title>Home</title>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=4262116224"/>
-  <link rel="stylesheet" type="text/css" href="css/index.css?crc=4165478977" id="pagesheet"/>
+  <link rel="stylesheet" type="text/css" href="css/index.css?crc=273866720" id="pagesheet"/>
   <!-- IE-only CSS -->
   <!--[if lt IE 9]>
   <link rel="stylesheet" type="text/css" href="css/iefonts_index.css?crc=486900203"/>
@@ -89,7 +89,10 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
     <div class="clip_frame colelem" id="u3739"><!-- image -->
      <img class="block" id="u3739_img" src="images/kuleuven.jpg?crc=3815151995" alt="" width="194" height="65"/>
     </div>
-    <div class="clearfix colelem" id="pu991-46"><!-- group -->
+    <div class="clearfix colelem" id="pu3962"><!-- group -->
+     <div class="clip_frame grpelem" id="u3962"><!-- image -->
+      <img class="block" id="u3962_img" src="images/coverstuycksmall.jpg?crc=4016431106" alt="" width="207" height="256"/>
+     </div>
      <div class="clearfix grpelem" id="u991-46"><!-- content -->
       <p id="u991-5">Graduated October 2017.<br/><br/>This work covers two broad applications in simulations for computer graphics. We discuss a new technique for the simulation of oil paint. Additionally, we propose techniques for art-directing simulations.</p>
       <p id="u991-6">&nbsp;</p>
@@ -152,9 +155,6 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
       <p id="u3943-12">&nbsp;</p>
       <p id="u3943-19"><span id="u3943-14"><br/></span><span id="u3943-15">Published by Morgan and Claypool Publishers: [</span><a class="nonblock" href="http://www.morganclaypoolpublishers.com/catalog_Orig/product_info.php?cPath=22&amp;products_id=1295" target="_blank"><span id="u3943-16">link</span></a><span id="u3943-18">]</span></p>
       <p id="u3943-24"><span id="u3943-20">Buy on Amazon: [</span><a class="nonblock" href="https://www.amazon.com/Cloth-Simulation-Computer-Graphics-Stuyck/dp/1681734117/" target="_blank"><span id="u3943-21">link</span></a><span id="u3943-23">]</span></p>
-     </div>
-     <div class="clip_frame grpelem" id="u3962"><!-- image -->
-      <img class="block" id="u3962_img" src="images/coverstuycksmall.jpg?crc=4016431106" alt="" width="207" height="256"/>
      </div>
     </div>
     <a class="anchor_item colelem" id="projects"></a>
@@ -479,7 +479,7 @@ Muse.Utils.prepHyperlinks(false);/* body */
 Muse.Utils.resizeHeight('.browser_width');/* resize height */
 Muse.Utils.requestAnimationFrame(function() { $('body').addClass('initialized'); });/* mark body as initialized */
 Muse.Utils.makeButtonsVisibleAfterSettingMinWidth();/* body */
-$('#u3745-4').registerOpacityScrollEffect([{"in":[-Infinity,509],"fade":382,"opacity":0},{"opacity":100,"in":[509,509]},{"in":[509,Infinity],"fade":469.95,"opacity":100}]);/* scroll effect */
+$('#u3745-4').registerOpacityScrollEffect([{"in":[-Infinity,509],"opacity":0,"fade":382},{"opacity":100,"in":[509,509]},{"in":[509,Infinity],"opacity":100,"fade":469.95}]);/* scroll effect */
 Muse.Utils.showWidgetsWhenReady();/* body */
 Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
 }catch(b){if(b&&"function"==typeof b.notify?b.notify():Muse.Assert.fail("Error calling selector function: "+b),false)throw b;}})})};
