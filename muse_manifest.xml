@@ -1,8 +1,8 @@
-<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://perswww.kuleuven.be/~u0085928" resolutions="1x" timestamp="1545361486340">
+<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://perswww.kuleuven.be/~u0085928" resolutions="1x" timestamp="1548028770618">
   <folder name="css">
     <file name="site_global.css" crc="4262116224"/>
-    <file name="index.css" crc="3808322053" ref="index"/>
-    <file name="iefonts_index.css" crc="118945964" ref="index"/>
+    <file name="index.css" crc="4094319860" ref="index"/>
+    <file name="iefonts_index.css" crc="3772230903" ref="index"/>
   </folder>
   <folder name="assets">
     <file name="talkoilpaint.pdf" crc="4261129400" seo="true" mt="1462258262000"/>
@@ -48,5 +48,5 @@
       <caption webpage="index" alt=""/>
     </file>
   </folder>
-  <file name="index.html" crc="4166172022" seo="true" mt="1545361472077" redirect="true"/>
+  <file name="index.html" crc="63085788" seo="true" mt="1548028686172" redirect="true"/>
 </manifest>
