@@ -1,8 +1,8 @@
-<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://perswww.kuleuven.be/~u0085928" resolutions="1x" timestamp="1548028770618">
+<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://perswww.kuleuven.be/~u0085928" resolutions="1x" timestamp="1551637660948">
   <folder name="css">
     <file name="site_global.css" crc="4262116224"/>
-    <file name="index.css" crc="4094319860" ref="index"/>
-    <file name="iefonts_index.css" crc="3772230903" ref="index"/>
+    <file name="index.css" crc="4085349776" ref="index"/>
+    <file name="iefonts_index.css" crc="169185022" ref="index"/>
   </folder>
   <folder name="assets">
     <file name="talkoilpaint.pdf" crc="4261129400" seo="true" mt="1462258262000"/>
@@ -11,6 +11,7 @@
     <file name="slides_oilpaint_lowres.pdf" crc="11474395" seo="true" mt="1474288528000"/>
     <file name="oilpaint_low_res.pdf" crc="443736656" seo="true" mt="1474285857000"/>
     <file name="resumetuurstuyck.pdf" crc="3962414771" seo="true" mt="1537134530000"/>
+    <file name="cv_tuurstuyck.pdf" crc="4073208867" seo="true" mt="1550723917000"/>
   </folder>
   <folder name="scripts">
     <file name="jquery-1.8.3.min.js" crc="209076791" ref="index"/>
@@ -29,7 +30,7 @@
     <file name="tuurstuycksmoll-crop-u3704.jpg" crc="85174134" seo="true" ref="index">
       <caption webpage="index" alt=""/>
     </file>
-    <file name="kuleuven.jpg" crc="3815151995" seo="true" ref="index">
+    <file name="coverstuycksmall.jpg" crc="4016431106" seo="true" ref="index">
       <caption webpage="index" alt=""/>
     </file>
     <file name="oculus_rift_logo_detail.jpg" crc="343263125" seo="true" ref="index">
@@ -44,9 +45,9 @@
     <file name="pixar-crop-u3759.jpg" crc="3179147" seo="true" ref="index">
       <caption webpage="index" alt=""/>
     </file>
-    <file name="coverstuycksmall.jpg" crc="4016431106" seo="true" ref="index">
+    <file name="s2019_signature.jpg" crc="296974667" seo="true" ref="index">
       <caption webpage="index" alt=""/>
     </file>
   </folder>
-  <file name="index.html" crc="63085788" seo="true" mt="1548028686172" redirect="true"/>
+  <file name="index.html" crc="203600171" seo="true" mt="1551637653012" redirect="true"/>
 </manifest>

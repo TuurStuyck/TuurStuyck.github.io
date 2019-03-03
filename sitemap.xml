@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://perswww.kuleuven.be/~u0085928/index.html</loc>
-    <lastmod>2019-01-20</lastmod>
+    <lastmod>2019-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
       <image:loc>https://perswww.kuleuven.be/~u0085928/images/tuurstuycksmoll-crop-u3704.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://perswww.kuleuven.be/~u0085928/images/kuleuven.jpg</image:loc>
+      <image:loc>https://perswww.kuleuven.be/~u0085928/images/coverstuycksmall.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://perswww.kuleuven.be/~u0085928/images/oculus_rift_logo_detail.jpg</image:loc>
@@ -24,7 +24,7 @@
       <image:loc>https://perswww.kuleuven.be/~u0085928/images/pixar-crop-u3759.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://perswww.kuleuven.be/~u0085928/images/coverstuycksmall.jpg</image:loc>
+      <image:loc>https://perswww.kuleuven.be/~u0085928/images/s2019_signature.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -40,14 +40,14 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://perswww.kuleuven.be/~u0085928/assets/talkoilpaint.pdf</loc>
-    <lastmod>2016-05-02</lastmod>
+    <loc>https://perswww.kuleuven.be/~u0085928/assets/slides_oilpaint_lowres.pdf</loc>
+    <lastmod>2016-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://perswww.kuleuven.be/~u0085928/assets/oilpaint_low_res.pdf</loc>
-    <lastmod>2016-09-19</lastmod>
+    <loc>https://perswww.kuleuven.be/~u0085928/assets/talkoilpaint.pdf</loc>
+    <lastmod>2016-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -58,7 +58,13 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://perswww.kuleuven.be/~u0085928/assets/slides_oilpaint_lowres.pdf</loc>
+    <loc>https://perswww.kuleuven.be/~u0085928/assets/cv_tuurstuyck.pdf</loc>
+    <lastmod>2019-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://perswww.kuleuven.be/~u0085928/assets/oilpaint_low_res.pdf</loc>
     <lastmod>2016-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
