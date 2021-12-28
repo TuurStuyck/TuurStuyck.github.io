@@ -1,0 +1,221 @@
+html
+{
+  height: 100%;
+  overflow-y: scroll;  }
+
+body
+{ font: normal .80em 'trebuchet ms', arial, sans-serif;
+  background: #EFEFEF;}
+
+p
+{ padding: 0 0 0px 0;
+  line-height: 1.7em;}
+
+img
+{ border: 0;}
+
+h1, h2, h3, h4, h5, h6 
+{ font: normal 230% 'century gothic', arial, sans-serif;
+  font-weight: bold;
+  color: #000000;
+  margin: 0 0 15px 0;
+  padding: 0 0 0 0;}
+
+h2
+{ font: normal 240% 'century gothic', arial, sans-serif;
+  color: #000000; }
+  
+h4, h5, h6
+{ margin: 0;
+  padding: 0 0 5px 0;
+  font: normal 150% arial, sans-serif;
+  color: #000000;}
+
+h5, h6
+{ font: italic 130% arial, sans-serif;
+  padding: 0 0 15px 0;
+  color: #000;}
+
+h6
+{ color: #000000;}
+
+a, a:hover
+{ outline: none;
+  text-decoration: underline;
+  color: #1293EE;}
+
+a:hover
+{ text-decoration: none;}
+
+hr {
+    margin-top: 0.0em;
+    margin-bottom: 0.5em;
+    margin-right: 75px;
+	color: #235B17;
+}
+
+blockquote
+{ margin: 20px 0; 
+  padding: 10px 20px 0 20px;
+  border: 1px solid #E5E5DB;
+  background: #FFF;}
+
+ul
+{ margin: 2px 0 22px 17px;}
+
+ul li
+{ list-style-type: circle;
+  margin: 0 0 6px 0; 
+  padding: 0 0 4px 5px;}
+
+ol
+{ margin: 8px 0 22px 20px;}
+
+ol li
+{ margin: 0 0 11px 0;}
+
+.shadow0 {
+  -webkit-box-shadow: 2px 2px 2px 2px #bbb;
+  -moz-box-shadow:    2px 2px 2px 2px #bbb;
+  box-shadow:         2px 2px 2px 2px #bbb;
+}
+
+.shadow1 {
+  -webkit-box-shadow: 2px 2px 2px 2px #bbb;
+  -moz-box-shadow:    2px 2px 2px 2px #bbb;
+  box-shadow:         2px 2px 2px 2px #bbb;
+}
+
+.title {
+	font: normal 170% 'century gothic', arial, sans-serif;
+	color: #000000;
+	font-weight: bold;
+}
+
+.conference {
+	font: normal 130% 'century gothic', arial, sans-serif;
+	font-weight: bold;
+}
+
+.authors {
+	font: normal 110% 'century gothic', arial, sans-serif;
+}
+
+.affiliations {
+	font: normal 90% 'century gothic', arial, sans-serif;
+}
+
+.abstract_title {
+	font: normal 160% 'century gothic', arial, sans-serif;
+	color: #000000;
+	font-weight: bold;
+}
+
+.abstract {
+	font: normal 130% 'Times New Roman', Times, serif;
+	color: #000000;
+	text-align: justify;
+}
+
+.download {
+	font: normal 130% 'Times New Roman', Times, serif;
+	color: #000000;
+}
+
+.sidebar
+{ float: left;
+  width: 950px;}
+
+#main, #logo, #menubar, #site_content, #footer
+{ margin-left: auto; 
+  margin-right: auto;}
+
+#header
+{
+  background: #EFEFEF;
+  height: 84px;}
+
+#logo
+{ width: 1030px;
+  position: relative;
+  height: 0px;
+  background: #6685C4;}
+
+#logo #logo_text 
+{ position: absolute;}
+
+#logo h1, #logo h2
+{ font: normal 250% 'century gothic', arial, sans-serif;
+  border-bottom: 0;
+  margin: 0;
+ }
+
+#logo_text h1, #logo_text h1 a, #logo_text h1
+{ color: #FFF;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  padding: 0px 0px 0px 10px; }
+
+#logo_text h2
+{ font-size: 180%;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0px 0px 0px 10px; 
+  color: #000;}
+
+#menubar
+{ width: 1030px;
+  height:35px;
+  padding: 0;
+  background: #3B5998;}
+
+ul#menu, ul#menu li
+{ float: left;
+  margin: 0; 
+  padding: 0;}
+
+ul#menu li
+{ list-style: none;}
+
+ul#menu li a
+{ letter-spacing: 0.1em;
+  font: normal 140% 'lucida sans unicode', arial, sans-serif;
+  display: block; 
+  float: left; 
+  height: 7px;
+  padding: 4px 26px 24px 26px;
+  text-align: center;
+  color: #DDD;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: transparent;} 
+
+ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
+{ color: #FFF;
+  background: #00287A repeat-x;}
+
+#site_content
+{ width: 968px;
+  overflow: hidden;
+  margin: 0 auto 0 auto;
+  padding: 20px 24px 5px 37px;
+  background: #FFF repeat-y;} 
+
+#content
+{ text-align: left;
+  width: 950px;}
+  
+#contenthome
+{ text-align: left;
+  width: 950px;}
+
+#footer
+{ width: 1030px;
+  font: normal 110% 'lucida sans unicode', arial, sans-serif;
+  height: 23px;
+  padding: 2px 0 0px 0;
+  text-align: center;
+  background: #3B5998 repeat-x;
+  color: #DDD;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;}
