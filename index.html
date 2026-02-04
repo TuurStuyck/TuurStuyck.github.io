@@ -1,833 +1,674 @@
-
 <!DOCTYPE HTML>
-<html>
-
+<html lang="en">
 <head>
   <title>Tuur Stuyck</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Personal website of Tuur Stuyck - Research Scientist - Meta Research" />
-  <meta name="keywords" content="computer graphics, computer vision, machine learning, physics based simulation, virtual clothing, cloth simulation" />
-  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
- 
- 
- <meta property="og:url" content="https://tuurstuyck.github.io/" />
- <meta property="og:description" content="Tuur Stuyck - Research Scientist at Meta Research" />
- <meta property="og:title" content="Personal website of Tuur Stuyck" />
+  <meta name="keywords" content="computer graphics, computer vision, robotics, machine learning, physics-based simulation, virtual clothing, cloth simulation" />
+  
+  <meta property="og:url" content="https://tuurstuyck.github.io/" />
+  <meta property="og:description" content="Tuur Stuyck - Research Scientist Lead at Meta Research" />
+  <meta property="og:title" content="Personal website of Tuur Stuyck" />
 
-  <link rel="stylesheet" type="text/css" href="style.css" title="style" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40412920-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-40412920-2');
+  </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-40412920-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <style>
+    /* Global Reset & Typography */
+    :root {
+      --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      --color-text: #333;
+      --color-link: #0066cc;
+      --bg-color: #fff;
+      --spacing-unit: 20px;
+    }
 
-  gtag('config', 'UA-40412920-2');
-</script>
+    body {
+      font-family: var(--font-main);
+      color: var(--color-text);
+      background-color: var(--bg-color);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
 
+    a {
+      color: var(--color-link);
+      text-decoration: none;
+    }
 
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Layout Containers */
+    #main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    /* Navigation */
+    nav {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    nav a:hover {
+      color: var(--color-link);
+    }
+
+    /* Header Images Grid - UPDATED */
+    .header-images {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 40px;
+      /* No wrap allowed here */
+    }
+
+    .header-images img {
+      /* Flex 1 forcing them to share space equally */
+      flex: 1 1 0px;
+      width: auto; 
+      height: auto; /* Maintain aspect ratio */
+      max-height: 200px; /* Don't get taller than 200px on wide screens */
+      object-fit: cover;
+      border-radius: 8px;
+      min-width: 0; /* Ensures images shrink properly in flex container */
+    }
+
+    /* Profile Section */
+    .profile-section {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    /* Profile Image - UPDATED */
+    .profile-img img {
+      height: 220px;
+      width: auto;
+      border-radius: 12px; /* Rounded corners, rectangular shape */
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .profile-info h1 {
+      font-size: 2.5em;
+      margin: 0 0 10px 0;
+    }
+
+    .profile-info h2 {
+      font-size: 1.5em;
+      font-weight: normal;
+      margin: 0 0 10px 0;
+      color: #555;
+    }
+
+    .profile-links {
+      margin-top: 15px;
+    }
+
+    .profile-links a {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    /* Bio Text */
+    .bio-text {
+      text-align: justify;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Section Headings */
+    h3 {
+      font-size: 1.8em;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+
+    /* List Items (Publications, History, etc) */
+    .item-row {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 40px;
+      align-items: flex-start;
+    }
+
+    .item-content {
+      flex: 1;
+    }
+
+    .item-title {
+      font-size: 1.2em;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .item-meta {
+      font-size: 1.1em;
+      color: #444;
+    }
+
+    /* Images in lists (Books, Logos) */
+    .item-image {
+      flex-shrink: 0;
+      width: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .item-image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .profile-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .item-row {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .item-image {
+        width: 100px; 
+        margin-bottom: 10px;
+      }
+    }
+  </style>
 </head>
 
 <body>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#publications">Publications</a>
+    <a href="#books">Books</a>
+    <a href="#work">Work History</a>
+    <a href="#education">Education</a>
+  </nav>
+
   <div id="main">
-    <div id="site_content">
-      <div id="contenthome">
-      <table cellspacing = "15" border = "0">
-          <td>            
-          <img src="./images/cloth.png" border="0" alt="Cloth Hand Interaction Oculus Connect" height="200"/>            
-          </td>
-          <td>            
-          <img src="./images/back.jpg" border="0" alt="Natural Media Simulation" height="200"/>            
-          </td>
-          <td>            
-          <img src="./images/F8.png" border="0" alt="Facebook F8 presentation 2019" height="200"/>            
-          </td>
-      </table>
-      
-      <hr style="width:100%;text-align:Center;margin-left:0">
-      
-      </br></br>
-      <table cellspacing = "15" border = "0">
-        <tr>
-          <td>            
-          <img src="./images/tuurstuycksmoll-crop-u3704.jpg" border="0" alt="Tuur Stuyck" height="220"/>            
-          </td>
-          <td>
-            <font size="8"><b>Tuur Stuyck</b></font><br/>
-            <font size="5">Research Scientist - Meta Reality Labs</font> </br>
-            <font size="3">Physics based animations, virtual clothing, digital humans and avatars, high performance graphics, machine learning</font>
-            <br/>
-            <br/>
-            <font size="3"> 
-            <a href = "mailto:tuur@meta.com" target = "_blank">tuur@meta.com</a></br>
-            <a href = "https://twitter.com/TuurStuyck" target = "_blank">Twitter</a></br>
-            <a href = "https://www.linkedin.com/in/tuurstuyck" target = "_blank">LinkedIn</a>
-            </font>
-          </td>
-         
-
-        </tr>
-      </table>
-      
-
-      <font size="3"> 
-      <p align="justify">
-        </br></br>
-        I am a Team Lead and Research Scientist at Meta Reality Labs. I am the 2026 SIGGRAPH Poster chair and served on the 2025 SIGGRAPH Asia Technical Paper Committee, as well as the SIGGRAPH 2025 Student Research Competition Chair and on the SIGGRAPH 2019 and 2020 Immersive Pavilion Committees. I also served as a committee member for High Performance Graphics 2021.
-        </br></br>
-        I am the author of the book Cloth Simulation for Computer Graphics
-        </br></br>
-        I am working in the exciting field of graphics research and how it relates to virtual humans, avatars and digital clothing and hair. Throughout my academic journey, I have had the privilege of interning at Adobe Research and Pixar Animation Studios' research group on two occasions. After completing my PhD at KU Leuven University, I joined Pixar as a postdoc. I have made several computer animated short movies [<a class="nonblock" href="https://www.youtube.com/user/TuurStuyck" target="_blank">link</a>] 
-      </br></br>
-      </font>
-      </div>
-     <div id="contenthome"> <!-- <class="sidebar"> -->
     
-    <hr style="width:100%;text-align:Center;margin-left:0">
-
-  </br></br></br></br>
-  <h3>Publications</h3>
-          <table cellspacing = "15" border = "0">
-          <tr>
-            <!--
-            <td>
-            <IMG style = "width:180px;" src = "./papers/arXiv21_NH/thumb.png">              
-            </td>-->
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b>Dress Anyone : Automatic Physically-Based Garment Pattern Refitting</b></span>
-            <span style = "font-size:1.1em">
-            </br>
-              <a href = "https://oden.utexas.edu/people/directory/Hsiao-yu%20Chen/ " target = "_blank">H. Chen</a>
-              <a href = "https://elrnv.com/ " target = "_blank">E. Larionov</a>
-              <a href = "https://www.cs.utah.edu/~ladislav/ " target = "_blank">L. Kavan</a>
-              <a href = " " target = "_blank">G. Lin</a>
-              <a href = " " target = "_blank">D. Roble</a>
-              <a href = " https://igl.ethz.ch/people/sorkine/" target = "_blank">O. Sorkine-Hornung</a>
-              <a href = "https://tuurstuyck.github.io/ " target = "_blank"><b>T. Stuyck</b></a>
-            </br>
-            Symposium on Computer Animation (SCA) 2025
-            </br>
-            [<a href = "https://arxiv.org/pdf/2405.19148">paper</a>]
-            [<a href = "https://www.youtube.com/watch?v=v7ZdkOlEW0E">video</a>]
-            </span>
-            </td>
-          </tr>
-          </table>
-          <table cellspacing = "15" border = "0">
-          <tr>
-            <!--
-            <td>
-            <IMG style = "width:180px;" src = "./papers/arXiv21_NH/thumb.png">              
-            </td>-->
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b>Self-supervised Learning of Latent Space Dynamics</b></span>
-            <span style = "font-size:1.1em">
-            </br>
-              <a href = "https://liyuesolo.github.io/" target = "_blank">Y. Li</a>
-              <a href = " " target = "_blank">G. Lin</a>
-              <a href = "https://elrnv.com/ " target = "_blank">E. Larionov</a>
-              <a href = "https://aljazbozic.github.io/ " target = "_blank">A. Bozic</a>
-              <a href = " " target = "_blank">D. Roble</a>
-              <a href = "https://www.cs.utah.edu/~ladislav/ " target = "_blank">L. Kavan</a>
-              <a href = " " target = "_blank">S. Coros</a>
-              <a href = " " target = "_blank">B. Thomaszewski</a>
-              <a href = "https://tuurstuyck.github.io/ " target = "_blank"><b>T. Stuyck</b></a>
-              <a href = "https://oden.utexas.edu/people/directory/Hsiao-yu%20Chen/ " target = "_blank">H. Chen</a>
-            </br>
-            Symposium on Computer Animation (SCA) 2025
-            </br>
-            [<a href = "https://arxiv.org/pdf/2507.07440">paper</a>]
-            [<a href = "https://www.youtube.com/watch?v=Ud40ayJANWA">video</a>]
-            </span>
-            </td>
-          </tr>
-          </table>
-          <table cellspacing = "15" border = "0">
-          <tr>
-            <!--
-            <td>
-            <IMG style = "width:180px;" src = "./papers/arXiv21_NH/thumb.png">              
-            </td>-->
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b>3D Mesh Editing using Masked LRMs</b></span>
-            <span style = "font-size:1.1em">
-            </br>
-              <a href = "https://www.computerscience.uchicago.edu/people/will-gao/" target = "_blank">W. Gao</a>
-              <a href = "https://wdilin.github.io/" target = "_blank">D. Wang</a>
-              <a href = "https://ychfan.github.io/" target = "_blank">Y. Fan</a>
-              <a href = "https://aljazbozic.github.io/ " target = "_blank">A. Bozic</a>
-              <a href = "https://tuurstuyck.github.io/ " target = "_blank"><b>T. Stuyck</b></a>
-              <a href = "https://sites.google.com/view/zhengqinli" target = "_blank">Z. Li</a>
-              <a href = "https://www.flycooler.com/" target = "_blank">Z. Dong</a>
-              <a href = "https://www.linkedin.com/in/rakesh-r-3848538/" target = "_blank">R. Ranjan</a>
-              <a href = "https://nsarafianos.github.io/ " target = "_blank">N. Sarafianos</a>
-            </br>
-            International Conference on Computer Vision, ICCV 2025     
-            </br>
-            [<a href = "https://chocolatebiscuit.github.io/MaskedLRM/">project</a>]
-            [<a href = "https://chocolatebiscuit.github.io/MaskedLRM/static/pdfs/arxiv.pdf">paper</a>]
-            </span>
-            </td>
-          </tr>
-          </table>
-          <table cellspacing = "15" border = "0">
-          <tr>
-            <!--
-            <td>
-            <IMG style = "width:180px;" src = "./papers/arXiv21_NH/thumb.png">              
-            </td>-->
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b>Quaffure: Real-Time Quasi-Static Neural Hair Simulation</b></span>
-            <span style = "font-size:1.1em">
-            </br>
-              <a href = "https://tuurstuyck.github.io/ " target = "_blank"><b>T. Stuyck</b></a>
-              <a href = " " target = "_blank">G. Lin</a>
-              <a href = "https://elrnv.com/ " target = "_blank">E. Larionov</a>
-              <a href = "https://oden.utexas.edu/people/directory/Hsiao-yu%20Chen/ " target = "_blank">H. Chen</a>
-              <a href = "https://aljazbozic.github.io/ " target = "_blank">A. Bozic</a>
-              <a href = "https://nsarafianos.github.io/ " target = "_blank">N. Sarafianos</a>
-              <a href = " " target = "_blank">D. Roble</a>
-            </br>
-            IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2025     
-            </br>
-            [<a href = "quaffure/quaffure.html">project</a>]
-            [<a href = "https://arxiv.org/abs/2412.10061">paper</a>]
-            [<a href = "https://www.youtube.com/watch?v=_kaSzSsfJuQ">video</a>]
-            </span>
-            </td>
-          </tr>
-        </table>
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <!--
-            <td>
-            <IMG style = "width:180px;" src = "./papers/arXiv21_NH/thumb.png">              
-            </td>-->
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b>PGC: Physics-Based Gaussian Cloth from a Single Pose</b></span>
-            <span style = "font-size:1.1em">
-            </br>
-              <a href = "https://tml.stanford.edu/people/michelle-guo " target = "_blank">M. Guo</a>
-              <a href = "https://mattchiangvfx.com/ " target = "_blank">M. Chiang</a>
-              <a href = "https://isantesteban.com/ " target = "_blank">I. Santesteban</a>
-              <a href = "https://nsarafianos.github.io/ " target = "_blank">N. Sarafianos</a>
-              <a href = "https://oden.utexas.edu/people/directory/Hsiao-yu%20Chen/ " target = "_blank">H. Chen</a>
-              <a href = " " target = "_blank">O. Halimi</a>
-              <a href = "https://aljazbozic.github.io/ " target = "_blank">A. Bozic</a>
-              <a href = "https://shunsukesaito.github.io/ " target = "_blank">S. Saito</a>
-              <a href = "https://jiajunwu.com/ " target = "_blank">J. Wu</a>
-              <a href = "https://profiles.stanford.edu/c-karen-liu " target = "_blank">K. Liu</a>
-              <a href = "https://tuurstuyck.github.io/ " target = "_blank"><b>T. Stuyck</b></a>
-              <a href = "https://elrnv.com/ " target = "_blank">E. Larionov</a>
-
-            </br>
-            IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2025     
-            </br>
-            [<a href = "https://phys-gaussian-cloth.github.io/">project</a>]
-            [<a href = "https://arxiv.org/pdf/2503.20779">paper</a>]
-            [<a href = "https://www.youtube.com/watch?v=Pi4Kw2wUBSU">video</a>]
-            </span>
-            </td>
-          </tr>
-        </table>
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <!--
-            <td>
-            <IMG style = "width:180px;" src = "./papers/arXiv21_NH/thumb.png">              
-            </td>-->
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b>Garment3DGen: 3D Garment Stylization and Texture Generation</b></span>
-            <span style = "font-size:1.1em">
-            </br>
-              <a href = "https://nsarafianos.github.io/ " target = "_blank">N. Sarafianos</a>
-              <a href = "https://tuurstuyck.github.io/ " target = "_blank"><b>T. Stuyck</b></a>
-              <a href = "https://engineering.purdue.edu/people/xiaoyu.xiang.1" target = "_blank">X. Xiang</a>
-              <a href = " " target = "_blank">Y. Li</a>
-              <a href = "https://www.linkedin.com/in/jovan-cmu/" target = "_blank">J. Popovic</a>
-              <a href = "https://www.linkedin.com/in/rakesh-r-3848538/" target = "_blank">R. Ranjan</a>
-            </br>
-            International Conference on 3D Vision (3DV) 2025     
-            </br>
-            [<a href = "https://nsarafianos.github.io/garment3dgen">project</a>]
-            [<a href = "https://arxiv.org/pdf/2403.18816">paper</a>]
-            [<a href = "https://www.youtube.com/watch?v=97L6W8AilY8">video</a>]
-            </span>
-            </td>
-          </tr>
-        </table>
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <!--
-            <td>
-            <IMG style = "width:180px;" src = "./papers/arXiv21_NH/thumb.png">              
-            </td>-->
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b>A Mesh-based Simulation Framework using Automatic Code Generation</b></span>
-            <span style = "font-size:1.1em">
-            </br>
-              <a href = "https://phherholz.github.io/" target = "_blank">P. Herholz</a>
-              <a href = "https://tuurstuyck.github.io/ " target = "_blank"><b>T. Stuyck</b></a>
-              <a href = "https://www.cs.utah.edu/~ladislav/ " target = "_blank">L. Kavan</a>
-            </br>
-            ACM Transaction on Graphics (SIGGRAPH Asia 2024)
-            </br>
-            [<a href = " ">paper</a>]
-            </span>
-            </td>
-          </tr>
-        </table>
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <!--
-            <td>
-            <IMG style = "width:180px;" src = "./papers/arXiv21_NH/thumb.png">              
-            </td>-->
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b>Estimating Cloth Elasticity Parameters from Homogenized Yarn-level Models</b></span>
-            <span style = "font-size:1.1em">
-            </br>
-              <a href = "https://www.cs.cornell.edu/~joyxiaojizhang/" target = "_blank">J. Zhang</a>
-              <a href = " " target = "_blank">G. Lin</a>
-              <a href = " " target = "_blank">L. Bode</a>
-              <a href = "https://oden.utexas.edu/people/directory/Hsiao-yu%20Chen/ " target = "_blank">H. Chen</a>
-              <a href = "https://tuurstuyck.github.io/ " target = "_blank"><b>T. Stuyck</b></a>
-              <a href = "https://elrnv.com/ " target = "_blank">E. Larionov</a>
-            </br>
-            Proceedings of the 17th ACM SIGGRAPH Conference on Motion, Interaction, and Games (MIG) 2024
-            </br>
-            [<a href = "https://arxiv.org/pdf/2401.15169">paper</a>]
-            [<a href = "https://www.youtube.com/watch?v=bjNjxqX34AE">video</a>]
-            </span>
-            </td>
-          </tr>
-        </table>
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <!--
-            <td>
-            <IMG style = "width:180px;" src = "./papers/arXiv21_NH/thumb.png">              
-            </td>-->
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b>DiffAvatar: Simulation-Ready Garment Optimization with Differentiable Simulation</b></span>
-            <span style = "font-size:1.1em">
-            </br>
-              <a href = "https://people.csail.mit.edu/liyifei/ " target = "_blank">Y. Li</a>
-              <a href = "https://oden.utexas.edu/people/directory/Hsiao-yu%20Chen/ " target = "_blank">H. Chen</a>
-              <a href = "https://elrnv.com/ " target = "_blank">E. Larionov</a>
-              <a href = "https://nsarafianos.github.io/ " target = "_blank">N. Sarafianos</a>
-              <a href = "https://cdfg.csail.mit.edu/wojciech " target = "_blank">W. Matusik</a>
-              <a href = "https://tuurstuyck.github.io/ " target = "_blank"><b>T. Stuyck</b></a>
-            </br>
-            IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2024     
-            </br>
-            [<a href = "https://people.csail.mit.edu/liyifei/publication/diffavatar/">project</a>]
-            [<a href = "https://arxiv.org/pdf/2311.12194.pdf">paper</a>]
-            [<a href = "https://youtu.be/vH2MCXneAUE?si=QLY4DlcNsHxREASd">video</a>]
-            </span>
-            </td>
-          </tr>
-        </table>
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <!--
-            <td>
-            <IMG style = "width:180px;" src = "./papers/arXiv21_NH/thumb.png">              
-            </td>-->
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b>DiffXPBD : Differentiable Position-Based Simulation of Compliant Constraint Dynamics</b></span>
-            <span style = "font-size:1.1em">
-            </br>
-              <a href = "https://tuurstuyck.github.io/ " target = "_blank"><b>T. Stuyck</b></a>
-              <a href = "https://oden.utexas.edu/people/directory/Hsiao-yu%20Chen/ " target = "_blank">H. Chen</a>
-            </br>
-            Symposium on Computer Animation (SCA) 2023
-            </br>
-            [<a href = "http://arxiv.org/abs/2301.01396">paper</a>]
-            [<a href = "https://youtu.be/O3bPyeFO404">video</a>]
-            </span>
-            </td>
-          </tr>
-        </table>
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b>Digital Garment Generation</b></span>
-            <span style = "font-size:1.1em">
-            </br>
-              <a href = "https://tuurstuyck.github.io/ " target = "_blank"><b>T. Stuyck</b></a>
-              <a href = "https://sites.google.com/site/tony2ng" target = "_blank">T. Tung</a>
-            </br>
-            2023 US Patent US20230088866
-            </span>
-            </td>
-          </tr>
-        </table>
-
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <!--
-            <td>
-            <IMG style = "width:180px;" src = "./papers/arXiv21_NH/thumb.png">              
-            </td>-->
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b>NeuWigs: A Neural Dynamic model for Volumetric Hair Capture and Animation</b></span>
-            <span style = "font-size:1.1em">
-            </br>
-              <a href = "https://ziyanw1.github.io/ " target = "_blank">Z. Wang</a>
-              <a href = "https://sites.google.com/view/gjnam " target = "_blank">G. Nam</a>
-              <a href = "https://tuurstuyck.github.io/ " target = "_blank"><b>T. Stuyck</b></a>
-              <a href = "https://stephenlombardi.github.io/ " target = "_blank">S. Lombardi</a>
-              <a href = "https://sites.google.com/site/zjucaochen/home " target = "_blank">C. Cao</a>
-              <a href = "https://scholar.google.com/citations?user=ss-IvjMAAAAJ&hl=en " target = "_blank">J. Saragih</a>
-              <a href = "https://zollhoefer.com/ " target = "_blank">M. Zollh&oumlfer</a>
-              <a href = "https://www.cs.cmu.edu/~jkh/ " target = "_blank">J. Hodgins</a>
-              <a href = "https://christophlassner.de/ " target = "_blank">C. Lassner</a>
-            </br>
-            IEEE Conference on Computer Vision and Pattern Recognition(CVPR) 2023
-            </br>
-            [<a href = "https://arxiv.org/pdf/2212.00613.pdf">paper</a>]
-            [<a href = "https://ziyanw1.github.io/neuwigs/">video</a>]
-            </span>
-            </td>
-          </tr>
-        </table>
-
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <!--
-            <td>
-            <IMG style = "width:180px;" src = "./papers/arXiv21_NH/thumb.png">              
-            </td>-->
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b>PhysGraph: Physics-Based Cloth Enhancement Using Graph Neural Networks</b></span>
-            <span style = "font-size:1.1em">
-            </br>
-              <a href = "https://scholar.google.com/citations?hl=en&user=otORCAkAAAAJ " target = "_blank">O. Halimi</a>
-              <a href = "https://elrnv.com/ " target = "_blank">E. Larionov</a>
-              <a href = "" target = "_blank">Z. Barzelay</a>
-              <a href = "https://phherholz.github.io/" target = "_blank">P. Herholz</a>
-              <a href = "https://tuurstuyck.github.io/ " target = "_blank"><b>T. Stuyck</b></a>
-            </br>
-            arXiv 2023
-            </br>
-            [<a href = "https://arxiv.org/pdf/2301.11841">paper</a>]
-            [<a href = "https://www.youtube.com/watch?v=s8ZFvdQdMBc&ab_channel=TuurStuyck">video</a>]
-            </span>
-            </td>
-          </tr>
-        </table>
-
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <!--
-            <td>
-            <IMG style = "width:180px;" src = "./papers/arXiv21_NH/thumb.png">              
-            </td>-->
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b>Pattern-Based Cloth Registration and Sparse-View Animation</b></span>
-            <span style = "font-size:1.1em">
-            </br>
-              <a href = "https://scholar.google.com/citations?hl=en&user=otORCAkAAAAJ " target = "_blank">O. Halimi</a>
-              <a href = "https://tuurstuyck.github.io/ " target = "_blank"><b>T. Stuyck</b></a>
-              <a href = "https://xiangdonglai.github.io/ " target = "_blank">D. Xiang</a>
-              <a href = "https://scholar.google.ch/citations?user=oLi7xJ0AAAAJ&hl=en " target = "_blank">T. Bagautdinov</a>
-              <a href = "https://www.linkedin.com/in/hewen " target = "_blank">H. Wen</a>
-              <a href = "https://scholar.google.com/citations?hl=en&user=yV7LaW8AAAAJ " target = "_blank">R. Kimmel</a>
-              <a href = "https://scholar.google.com/citations?hl=en&user=YvS3QpkAAAAJ " target = "_blank">T. Shiratori</a>
-              <a href = "https://scholar.google.com/citations?hl=en&user=49ovzE4AAAAJ " target = "_blank">C. Wu</a>
-              <a href = "https://scholar.google.com/citations?hl=en&user=Yd4KvooAAAAJ " target = "_blank">Y. Sheikh</a>
-              <a href = "https://www.cs.jhu.edu/~fpradan1/ " target = "_blank">F. Prada</a>
-            </br>
-            ACM Transaction on Graphics (SIGGRAPH Asia 2022)
-            </br>
-            [<a href = "https://arxiv.org/abs/2206.03373">paper</a>]
-            </span>
-            </td>
-          </tr>
-        </table>
-
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <!--
-            <td>
-            <IMG style = "width:180px;" src = "./papers/arXiv21_NH/thumb.png">              
-            </td>-->
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b>Dressing Avatars: Deep Photorealistic Appearance for Physically Simulated Clothing</b></span>
-            <span style = "font-size:1.1em">
-            </br>
-              <a href = "https://xiangdonglai.github.io/ " target = "_blank">D. Xiang</a>
-              <a href = "https://scholar.google.ch/citations?user=oLi7xJ0AAAAJ&hl=en " target = "_blank">T. Bagautdinov</a>
-              <a href = "https://tuurstuyck.github.io/ " target = "_blank"><b>T. Stuyck</b></a>
-              <a href = "https://www.cs.jhu.edu/~fpradan1/ " target = "_blank">F. Prada</a>
-              <a href = "https://scholar.google.com/citations?user=Wx62iOsAAAAJ&hl=en " target = "_blank">J. Romero</a>
-              <a href = "https://scholar.google.com/citations?hl=en&user=vy8xXDQAAAAJ " target = "_blank">W. Xu</a>
-              <a href = "https://scholar.google.com/citations?hl=en&user=IolN_okAAAAJ " target = "_blank">S. Saito</a>
-              <a href = "https://scholar.google.com/citations?hl=en&user=-PsRtB_TuTQC " target = "_blank">J. Guo</a>
-              <a href = "https://scholar.google.com/citations?hl=en&user=ve3Ki9kAAAAJ " target = "_blank">B. Smith</a>
-              <a href = "https://scholar.google.com/citations?hl=en&user=YvS3QpkAAAAJ " target = "_blank">T. Shiratori</a>
-              <a href = "https://scholar.google.com/citations?hl=en&user=Yd4KvooAAAAJ " target = "_blank">Y. Sheikh</a>
-              <a href = "https://scholar.google.com/citations?hl=en&user=vswo4rQAAAAJ " target = "_blank">J. Hodgins</a>
-              <a href = "https://scholar.google.com/citations?hl=en&user=49ovzE4AAAAJ " target = "_blank">C. Wu</a>
-            </br>
-            ACM Transaction on Graphics (SIGGRAPH Asia 2022)
-            </br>
-            [<a href = "https://arxiv.org/abs/2206.15470">paper</a>]
-            [<a href = "https://research.facebook.com/publications/dressing-avatars-deep-photorealistic-appearance-for-physically-simulated-clothing/">Video</a>]
-            [<a href = "https://uploadvr.com/meta-avatar-clothes-research/">UploadVR</a>]
-            [<a href = "https://80.lv/articles/meta-presented-photorealistic-clothing-for-avatars">80 Level</a>]
-            [<a href = "https://www.moguravr.com/meta-avatar-changing-clothes-research/">Mogura VR</a>]
-            </span>
-            </td>
-          </tr>
-        </table>
-
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <!--
-            <td>
-            <IMG style = "width:180px;" src = "./papers/arXiv21_NH/thumb.png">              
-            </td>-->
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b>Virtual Elastic Objects</b></span>
-            <span style = "font-size:1.1em">
-            </br>
-              <a href = "https://oden.utexas.edu/people/directory/Hsiao-yu%20Chen/ " target = "_blank">H. Chen</a>
-              <a href = "https://people.mpi-inf.mpg.de/~tretschk/ " target = "_blank">E. Tretschk</a>
-              <a href = "https://tuurstuyck.github.io/ " target = "_blank"><b>T. Stuyck</b></a>
-              <a href = "https://cgg.mff.cuni.cz/~kadlecek/ " target = "_blank">P. Kadlecek</a>
-              <a href = "https://www.cs.utah.edu/~ladislav/ " target = "_blank">L. Kavan</a>
-              <a href = "https://www.cs.utexas.edu/users/evouga/ " target = "_blank">E. Vouga</a>
-              <a href = "https://christophlassner.de/ " target = "_blank">C. Lassner</a>
-            </br>
-            IEEE Conference on Computer Vision and Pattern Recognition(CVPR) 2022
-            </br>
-            [<a href = "https://arxiv.org/abs/2201.04623">paper</a>]
-            [<a href = "https://hsiaoyu.github.io/VEO/">Project page</a>]
-            </span>
-            </td>
-          </tr>
-        </table>
-
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <!--
-            <td>
-            <IMG style = "width:180px;" src = "./papers/arXiv21_NH/thumb.png">              
-            </td>-->
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b>HVH: Learning a Hybrid Neural Volumetric Representation for Dynamic Hair Performance Capture</b></span>
-            <span style = "font-size:1.1em">
-            </br>
-              <a href = "https://ziyanw1.github.io/ " target = "_blank">Z. Wang</a>
-              <a href = "https://sites.google.com/view/gjnam " target = "_blank">G. Nam</a>
-              <a href = "https://tuurstuyck.github.io/ " target = "_blank"><b>T. Stuyck</b></a>
-              <a href = "https://stephenlombardi.github.io/ " target = "_blank">S. Lombardi</a>
-              <a href = "https://zollhoefer.com/ " target = "_blank">M. Zollh&oumlfer</a>
-              <a href = "https://www.cs.cmu.edu/~jkh/ " target = "_blank">J. Hodgins</a>
-              <a href = "https://christophlassner.de/ " target = "_blank">C. Lassner</a>
-            </br>
-            IEEE Conference on Computer Vision and Pattern Recognition(CVPR) 2022
-            </br>
-            [<a href = "https://arxiv.org/abs/2112.06904">paper</a>]
-            [<a href = "https://ziyanw1.github.io/hvh/">video</a>]
-            </span>
-            </td>
-          </tr>
-        </table>
-
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b>Simulating garment with wrinkles based on physics based cloth simulator and machine learning model</b></span>
-            <span style = "font-size:1.1em">
-            </br>
-              <a href = "https://tuurstuyck.github.io/ " target = "_blank"><b>T. Stuyck</b></a>
-              <a href = "https://sites.google.com/site/tony2ng" target = "_blank">T. Tung</a>
-            </br>
-            2021 US Patent US10909744B1
-            </span>
-            </td>
-          </tr>
-        </table>
-
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b>Cloth Simulation for Computer Graphics</b></span>
-            <span style = "font-size:1.1em">
-            </br>
-              <a href = "https://tuurstuyck.github.io/ " target = "_blank"><b>T. Stuyck</b></a>
-            </br>
-            2018 Synthesis Lectures on Visual Computing: Computer Graphics, Animation, Computational Photography, and Imaging. </br>
-            Morgan & Claypool Publishers.
-            </span>
-            </td>
-          </tr>
-        </table>
-
-
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b>Natural Media Simulation and Art-Directable Simulations for Computer Animation</b></span>
-            <span style = "font-size:1.1em">
-            </br>
-              <a href = "https://tuurstuyck.github.io/ " target = "_blank"><b>T. Stuyck</b></a>
-            </br>
-            2017 PhD Thesis.
-            </span>
-            </td>
-          </tr>
-        </table>
-
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b>Real-Time Oil Painting on Mobile Hardware</b></span>
-            <span style = "font-size:1.1em">
-            </br>
-              <a href = "https://tuurstuyck.github.io/" target = "_blank"><b>T. Stuyck</b></a>
-              <a href = "http://www.cs.columbia.edu/~fang/" target = "_blank">F. Da</a>
-              <a href = "https://sunilhadap.github.io/" target = "_blank">S. Hadap</a>
-              <a href = "https://sites.google.com/site/philipdutre/" target = "_blank">P. Dutre</a>
-            </br>
-            2017 Computer Graphics Forum.
-            </span>
-            </td>
-          </tr>
-        </table>
-
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b>Sculpting Fluids: A New and Intuitive Approach to Art-Directable Fluids</b></span>
-            <span style = "font-size:1.1em">
-            </br>
-              <a href = "https://tuurstuyck.github.io/ " target = "_blank"><b>T. Stuyck</b></a>
-              <a href = "https://sites.google.com/site/philipdutre/" target = "_blank">P. Dutre</a>
-            </br>
-            2016 Siggraph Poster and Research Competition Presentation </br>
-            Second place ACM SIGGRAPH Research Competition 2016
-            </span>
-            </td>
-          </tr>
-        </table>
-
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b>Model Predictive Control for Art-Directable Fluids</b></span>
-            <span style = "font-size:1.1em">
-            </br>
-              <a href = "https://tuurstuyck.github.io/ " target = "_blank"><b>T. Stuyck</b></a>
-              <a href = "https://sites.google.com/site/philipdutre/" target = "_blank">P. Dutre</a>
-            </br>
-            2016 Siggraph Poster 
-            </span>
-            </td>
-          </tr>
-        </table>
-
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b>Digital Painting Classroom: Learning Oil Painting Using a Tablet</b></span>
-            <span style = "font-size:1.1em">
-            </br>
-              <a href = "https://tuurstuyck.github.io/ " target = "_blank"><b>T. Stuyck</b></a>
-              <a href = "https://sunilhadap.github.io/" target = "_blank">S. Hadap</a>
-              <a href = "https://sites.google.com/site/philipdutre/" target = "_blank">P. Dutre</a>
-            </br>
-            2016 Siggraph Short Talk
-            </span>
-            </td>
-          </tr>
-        </table>
-
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b>HR-Kinect-High-Resolution Dynamic 3D Scanning for Facial Expression Analysis</b></span>
-            <span style = "font-size:1.1em">
-            </br>
-              <a href = "https://tuurstuyck.github.io/ " target = "_blank"><b>T. Stuyck</b></a>
-              D. Vandermeulen
-              D. Smeets
-              P Claes
-            </br>
-            2013 Master thesis
-            </span>
-            </td>
-          </tr>
-        </table>
-
-        
-
-        </br></br></br></br>
-        <h3>Books</h3>
-
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <td>
-            <IMG style = "width:180px;" src = "./images/coverstuycksmall.jpg">
-            </td>
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b><font size="4">Cloth Simulation For Computer Graphics</font></b></br>
-            Physics based animation is commonplace in animated feature films and even special effects for live-action movies. Think about a recent movie and there will be some sort of special effects such as explosions or virtual worlds. Cloth simulation is no different and is ubiquitous because most virtual characters (hopefully!) wear some sort of clothing. </br></br>
-            The focus of this book is physics based cloth simulation. We start by providing background information and discuss a range of applications. This book provides explanations of multiple cloth simulation techniques. More specifically, we start with the most simple explicitly integrated mass-spring model and gradually work our way up to more complex and commonly used implicitly integrated continuum techniques in state-of-the-art implementations. We give an intuitive explanation of the techniques and give additional information on how to efficiently implement them on a computer. </br></br>
-            
-            Published by Morgan and Claypool Publishers: <a class="nonblock" href="https://www.morganclaypoolpublishers.com/catalog_Orig/product_info.php?cPath=22&amp;products_id=1295">[link]</a></br>
-            Buy on Amazon: <a class="nonblock" href="https://www.amazon.com/Cloth-Simulation-Computer-Graphics-Stuyck/dp/1681734117/">[link]</a></br>
-            Fxguide article:<a class="nonblock" href="https://www.fxguide.com/featured/cloth-simulation-opening-the-kimono/">[link]</a>
-            </span>
-          </tr>
-        </table> 
-
-        </br></br></br></br>
-        <h3>Work History</h3>
-
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <td>
-            <IMG style = "width:180px;" src = "./images/Meta.png">
-            </td>
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b><font size="4">Meta Research</font></b></br>
-            <b>Research Scientist, Simulation Lead</b></br>
-            Physics based animations for virtual humans and avatars</br>
-            2019 F8 Talk [<a class="nonblock" href="https://www.youtube.com/watch?v=FhiAFo9U_sM" target="_blank">link</a>]</br>
-            2021 Oculus Connect [<a class="nonblock" href="https://www.linkedin.com/posts/tuurstuyck_virtualhumans-avatars-digitalfashion-activity-6860953280483328000-v-xf" target="_blank">link</a>]</br>
-            2022 Meta Connect [<a class="nonblock" href="https://www.youtube.com/watch?v=r7raHNfPc6A&t=4s&ab_channel=VRTrailers%26Clips" target="_blank">link</a>]</br>
-            2018 - now
-            </span>
-          </tr>
-        </table>   
-
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <td>
-            <IMG style = "width:180px;" src = "./images/hpg.png">
-            </td>
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b><font size="4">High Performance Graphics</font></b></br>
-            Committee Member 2021 [<a class="nonblock" href="https://www.highperformancegraphics.org/2021/" target="_blank">link</a>]</br>
-            </span>
-          </tr>
-        </table>   
-
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <td>
-            <IMG style = "width:180px;" src = "./images/s2019_signature.jpg">
-            </td>
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b><font size="4">SIGGRAPH</font></b></br>
-            SIGGRAPH 2019, 2020</br>
-            Virtual, Augmented, and Mixed Reality Committee Member</br>
-            SIGGRAPH 2025</br>
-            Student Research Competition Chair</br>
-            SIGGRAPH 2026</br>
-            Poster Chair</br>
-            </span>
-          </tr>
-        </table>   
-
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <td>
-            <IMG style = "width:180px;" src = "./images/pixar-crop-u3759.jpg">
-            </td>
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b><font size="4">Pixar Animation Studios</font></b></br>
-            <b>Postdoctoral Research Scientist</b></br>
-            Space-time Control for Cloth Simulation, 2017-2018 </br></br>
-            <b>Research Intern (twice)</b></br>
-            Artistic Control of Cloth Simulations, Jun 2016 - Sep 2016 </br>
-            Space-Time Control for Cloth Simulations, Nov 2016 - Feb 2017
-            </span>
-          </tr>
-        </table>   
-
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <td>
-            <IMG style = "width:180px;" src = "./images/Adobe-logo.png">
-            </td>
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b><font size="4">Adobe</font></b></br>
-            <b>Research collaboration</b></br>
-            Continued collaboration working on research internship project, Aug 2014 - Jan 2016</br></br>
-            <b>Research Intern</b></br>
-            Realistic oil paint simulation on mobile hardware, May 2014 - Aug 2014
-            </span>
-          </tr>
-        </table>   
-
-        </br></br></br></br>
-        <h3>Education</h3>
-
-        <table cellspacing = "15" border = "0">
-          <tr>
-            <td>
-            <IMG style = "width:180px;" src = "./images/kuleuven.jpg">
-            </td>
-            <td>
-            <span style = "font-size:1.2em"><link color = "red">
-            <b>PhD Computer Science, KU Leuven</b></br>
-            Oct 2013 - Oct 2017 </br>
-            Natural Media Simulation and Art-Directable Simulations for Computer Graphics
-            </br>
-            </br>  
-            <b>Master of science in ENGINEERING, KU Leuven</b></br>
-            Mathematical Engineering </br>
-            Sep 2011 - Jun 2013 </br>
-            Thesis: HR-Kinect - high-resolution dynamic 3D scanning for facial expression analysis
-            </br>
-            </br>
-            <b>Bachelor of science in ENGINEERING, KU Leuven</b></br>
-            Major: Computer Science | Minor: Electrical Engineering </br>
-            Sep 2008 - Jul 2011
-            </span>
-          </tr>
-        </table>      
- 
-    
-      </div>
+    <div id="home" class="header-images">
+      <img src="./images/cloth.png" alt="Cloth Hand Interaction Oculus Connect" loading="lazy"/>
+      <img src="./images/back.jpg" alt="Natural Media Simulation" loading="lazy"/>
+      <img src="./images/F8.png" alt="Facebook F8 presentation 2019" loading="lazy"/>
     </div>
-  </div>
+
+    <hr style="width:100%;text-align:center;margin-left:0; opacity: 0.2;">
+
+    <section class="profile-section">
+      <div class="profile-img">
+        <img src="./images/tuurstuycksmoll-crop-u3704.jpg" alt="Tuur Stuyck" loading="lazy"/>
+      </div>
+      <div class="profile-info">
+        <h1>Tuur Stuyck</h1>
+        <h2>Research Scientist Lead - Meta</h2>
+        <p>Physics-based simulation, robotics, and avatars.</p>
+        <div class="profile-links">
+          <a href="mailto:tuur@meta.com" target="_blank">tuur@meta.com</a>
+          <a href="https://www.linkedin.com/in/tuurstuyck" target="_blank">LinkedIn</a>
+          <a href="https://scholar.google.com/citations?user=buAnzJsAAAAJ&hl=en" target="_blank">Google Scholar</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bio-text">
+      <p>I am a Team Lead and Research Scientist at Meta Reality Labs specializing in physics-based simulation, robotics, high-performance computer graphics, machine learning, and virtual avatars. Experienced individual contributor and leader.</p>
+      <p>I am the 2026 SIGGRAPH Poster chair and served on the 2025 SIGGRAPH Asia Technical Paper Committee, as well as the SIGGRAPH 2025 Student Research Competition Chair and on the SIGGRAPH 2019 and 2020 Immersive Pavilion Committees. I also served as a committee member for High Performance Graphics 2021.</p>
+      <p>I am the author of the book Cloth Simulation for Computer Graphics.</p>
+      <p>I previously worked at Adobe Research and Pixar Animation Studios' research group. I have made several computer animated short movies. [<a class="nonblock" href="https://www.youtube.com/user/TuurStuyck" target="_blank">link</a>]</p>
+    </section>
+
+    <hr style="width:100%;text-align:center;margin-left:0; opacity: 0.2;">
+
+    <section id="publications">
+      <h3>Publications</h3>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">SkinCells: Sparse Skinning using Voronoi Cells</span>
+          <div class="item-meta">
+            <a href="https://elrnv.com/" target="_blank">E. Larionov</a>, <a href="https://isantesteban.com/" target="_blank">I. Santesteban</a>, <a href="https://oden.utexas.edu/people/directory/Hsiao-yu%20Chen/" target="_blank">H. Chen</a>, <a href="" target="_blank">G. Lin</a>, <a href="https://phherholz.github.io/" target="_blank">P. Herholz</a>, <a href="https://rgoldade.github.io/" target="_blank">R. Goldade</a>, <a href="https://www.cs.utah.edu/~ladislav/" target="_blank">L. Kavan</a>, <a href="" target="_blank">D. Roble</a>, <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a><br/>
+            EuroGraphics (EG) 2026<br/>
+            [<a href="https://www.arxiv.org/abs/2506.14714">paper</a>] [<a href="https://www.youtube.com/watch?v=cLnU9qbnSyY">video</a>]
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">Neuralocks: Real-Time Dynamic Neural Hair Simulation</span>
+          <div class="item-meta">
+            <a href="" target="_blank">G. Lin</a>, <a href="https://elrnv.com/" target="_blank">E. Larionov</a>, <a href="https://oden.utexas.edu/people/directory/Hsiao-yu%20Chen/" target="_blank">H. Chen</a>, <a href="" target="_blank">D. Roble</a>, <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a><br/>
+            EuroGraphics (EG) 2026<br/>
+            [<a href="https://arxiv.org/abs/2507.05191">paper</a>] [<a href="https://www.youtube.com/watch?v=E5EyWAhXWXQ">video</a>]
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">Dress Anyone: Automatic Physically-Based Garment Pattern Refitting</span>
+          <div class="item-meta">
+            <a href="https://oden.utexas.edu/people/directory/Hsiao-yu%20Chen/" target="_blank">H. Chen</a>, <a href="https://elrnv.com/" target="_blank">E. Larionov</a>, <a href="https://www.cs.utah.edu/~ladislav/" target="_blank">L. Kavan</a>, <a href="" target="_blank">G. Lin</a>, <a href="" target="_blank">D. Roble</a>, <a href="https://igl.ethz.ch/people/sorkine/" target="_blank">O. Sorkine-Hornung</a>, <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a><br/>
+            Symposium on Computer Animation (SCA) 2025<br/>
+            [<a href="https://arxiv.org/pdf/2405.19148">paper</a>] [<a href="https://www.youtube.com/watch?v=v7ZdkOlEW0E">video</a>]
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">Self-supervised Learning of Latent Space Dynamics</span>
+          <div class="item-meta">
+            <a href="https://liyuesolo.github.io/" target="_blank">Y. Li</a>, <a href="" target="_blank">G. Lin</a>, <a href="https://elrnv.com/" target="_blank">E. Larionov</a>, <a href="https://aljazbozic.github.io/" target="_blank">A. Bozic</a>, <a href="" target="_blank">D. Roble</a>, <a href="https://www.cs.utah.edu/~ladislav/" target="_blank">L. Kavan</a>, <a href="" target="_blank">S. Coros</a>, <a href="" target="_blank">B. Thomaszewski</a>, <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a>, <a href="https://oden.utexas.edu/people/directory/Hsiao-yu%20Chen/" target="_blank">H. Chen</a><br/>
+            Symposium on Computer Animation (SCA) 2025<br/>
+            [<a href="https://arxiv.org/pdf/2507.07440">paper</a>] [<a href="https://www.youtube.com/watch?v=Ud40ayJANWA">video</a>]
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">3D Mesh Editing using Masked LRMs</span>
+          <div class="item-meta">
+            <a href="https://www.computerscience.uchicago.edu/people/will-gao/" target="_blank">W. Gao</a>, <a href="https://wdilin.github.io/" target="_blank">D. Wang</a>, <a href="https://ychfan.github.io/" target="_blank">Y. Fan</a>, <a href="https://aljazbozic.github.io/" target="_blank">A. Bozic</a>, <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a>, <a href="https://sites.google.com/view/zhengqinli" target="_blank">Z. Li</a>, <a href="https://www.flycooler.com/" target="_blank">Z. Dong</a>, <a href="https://www.linkedin.com/in/rakesh-r-3848538/" target="_blank">R. Ranjan</a>, <a href="https://nsarafianos.github.io/" target="_blank">N. Sarafianos</a><br/>
+            International Conference on Computer Vision, ICCV 2025<br/>
+            [<a href="https://chocolatebiscuit.github.io/MaskedLRM/">project</a>] [<a href="https://chocolatebiscuit.github.io/MaskedLRM/static/pdfs/arxiv.pdf">paper</a>]
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">Quaffure: Real-Time Quasi-Static Neural Hair Simulation</span>
+          <div class="item-meta">
+            <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a>, <a href="" target="_blank">G. Lin</a>, <a href="https://elrnv.com/" target="_blank">E. Larionov</a>, <a href="https://oden.utexas.edu/people/directory/Hsiao-yu%20Chen/" target="_blank">H. Chen</a>, <a href="https://aljazbozic.github.io/" target="_blank">A. Bozic</a>, <a href="https://nsarafianos.github.io/" target="_blank">N. Sarafianos</a>, <a href="" target="_blank">D. Roble</a><br/>
+            IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2025<br/>
+            [<a href="quaffure/quaffure.html">project</a>] [<a href="https://arxiv.org/abs/2412.10061">paper</a>] [<a href="https://www.youtube.com/watch?v=_kaSzSsfJuQ">video</a>]
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">PGC: Physics-Based Gaussian Cloth from a Single Pose</span>
+          <div class="item-meta">
+            <a href="https://tml.stanford.edu/people/michelle-guo" target="_blank">M. Guo</a>, <a href="https://mattchiangvfx.com/" target="_blank">M. Chiang</a>, <a href="https://isantesteban.com/" target="_blank">I. Santesteban</a>, <a href="https://nsarafianos.github.io/" target="_blank">N. Sarafianos</a>, <a href="https://oden.utexas.edu/people/directory/Hsiao-yu%20Chen/" target="_blank">H. Chen</a>, <a href="" target="_blank">O. Halimi</a>, <a href="https://aljazbozic.github.io/" target="_blank">A. Bozic</a>, <a href="https://shunsukesaito.github.io/" target="_blank">S. Saito</a>, <a href="https://jiajunwu.com/" target="_blank">J. Wu</a>, <a href="https://profiles.stanford.edu/c-karen-liu" target="_blank">K. Liu</a>, <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a>, <a href="https://elrnv.com/" target="_blank">E. Larionov</a><br/>
+            IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2025<br/>
+            [<a href="https://phys-gaussian-cloth.github.io/">project</a>] [<a href="https://arxiv.org/pdf/2503.20779">paper</a>] [<a href="https://www.youtube.com/watch?v=Pi4Kw2wUBSU">video</a>]
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">Garment3DGen: 3D Garment Stylization and Texture Generation</span>
+          <div class="item-meta">
+            <a href="https://nsarafianos.github.io/" target="_blank">N. Sarafianos</a>, <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a>, <a href="https://engineering.purdue.edu/people/xiaoyu.xiang.1" target="_blank">X. Xiang</a>, <a href="" target="_blank">Y. Li</a>, <a href="https://www.linkedin.com/in/jovan-cmu/" target="_blank">J. Popovic</a>, <a href="https://www.linkedin.com/in/rakesh-r-3848538/" target="_blank">R. Ranjan</a><br/>
+            International Conference on 3D Vision (3DV) 2025<br/>
+            [<a href="https://nsarafianos.github.io/garment3dgen">project</a>] [<a href="https://arxiv.org/pdf/2403.18816">paper</a>] [<a href="https://www.youtube.com/watch?v=97L6W8AilY8">video</a>]
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">A Mesh-based Simulation Framework using Automatic Code Generation</span>
+          <div class="item-meta">
+            <a href="https://phherholz.github.io/" target="_blank">P. Herholz</a>, <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a>, <a href="https://www.cs.utah.edu/~ladislav/" target="_blank">L. Kavan</a><br/>
+            ACM Transaction on Graphics (SIGGRAPH Asia 2024)<br/>
+            [<a href="#">paper</a>]
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">Estimating Cloth Elasticity Parameters from Homogenized Yarn-level Models</span>
+          <div class="item-meta">
+            <a href="https://www.cs.cornell.edu/~joyxiaojizhang/" target="_blank">J. Zhang</a>, <a href="" target="_blank">G. Lin</a>, <a href="" target="_blank">L. Bode</a>, <a href="https://oden.utexas.edu/people/directory/Hsiao-yu%20Chen/" target="_blank">H. Chen</a>, <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a>, <a href="https://elrnv.com/" target="_blank">E. Larionov</a><br/>
+            Proceedings of the 17th ACM SIGGRAPH Conference on Motion, Interaction, and Games (MIG) 2024<br/>
+            [<a href="https://arxiv.org/pdf/2401.15169">paper</a>] [<a href="https://www.youtube.com/watch?v=bjNjxqX34AE">video</a>]
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">DiffAvatar: Simulation-Ready Garment Optimization with Differentiable Simulation</span>
+          <div class="item-meta">
+            <a href="https://people.csail.mit.edu/liyifei/" target="_blank">Y. Li</a>, <a href="https://oden.utexas.edu/people/directory/Hsiao-yu%20Chen/" target="_blank">H. Chen</a>, <a href="https://elrnv.com/" target="_blank">E. Larionov</a>, <a href="https://nsarafianos.github.io/" target="_blank">N. Sarafianos</a>, <a href="https://cdfg.csail.mit.edu/wojciech" target="_blank">W. Matusik</a>, <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a><br/>
+            IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2024<br/>
+            [<a href="https://people.csail.mit.edu/liyifei/publication/diffavatar/">project</a>] [<a href="https://arxiv.org/pdf/2311.12194.pdf">paper</a>] [<a href="https://youtu.be/vH2MCXneAUE?si=QLY4DlcNsHxREASd">video</a>]
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">DiffXPBD: Differentiable Position-Based Simulation of Compliant Constraint Dynamics</span>
+          <div class="item-meta">
+            <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a>, <a href="https://oden.utexas.edu/people/directory/Hsiao-yu%20Chen/" target="_blank">H. Chen</a><br/>
+            Symposium on Computer Animation (SCA) 2023<br/>
+            [<a href="http://arxiv.org/abs/2301.01396">paper</a>] [<a href="https://youtu.be/O3bPyeFO404">video</a>]
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">Digital Garment Generation</span>
+          <div class="item-meta">
+            <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a>, <a href="https://sites.google.com/site/tony2ng" target="_blank">T. Tung</a><br/>
+            2023 US Patent US20230088866
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">NeuWigs: A Neural Dynamic model for Volumetric Hair Capture and Animation</span>
+          <div class="item-meta">
+            <a href="https://ziyanw1.github.io/" target="_blank">Z. Wang</a>, <a href="https://sites.google.com/view/gjnam" target="_blank">G. Nam</a>, <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a>, <a href="https://stephenlombardi.github.io/" target="_blank">S. Lombardi</a>, <a href="https://sites.google.com/site/zjucaochen/home" target="_blank">C. Cao</a>, <a href="https://scholar.google.com/citations?user=ss-IvjMAAAAJ&hl=en" target="_blank">J. Saragih</a>, <a href="https://zollhoefer.com/" target="_blank">M. Zollh&ouml;fer</a>, <a href="https://www.cs.cmu.edu/~jkh/" target="_blank">J. Hodgins</a>, <a href="https://christophlassner.de/" target="_blank">C. Lassner</a><br/>
+            IEEE Conference on Computer Vision and Pattern Recognition(CVPR) 2023<br/>
+            [<a href="https://arxiv.org/pdf/2212.00613.pdf">paper</a>] [<a href="https://ziyanw1.github.io/neuwigs/">video</a>]
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">PhysGraph: Physics-Based Cloth Enhancement Using Graph Neural Networks</span>
+          <div class="item-meta">
+            <a href="https://scholar.google.com/citations?hl=en&user=otORCAkAAAAJ" target="_blank">O. Halimi</a>, <a href="https://elrnv.com/" target="_blank">E. Larionov</a>, <a href="" target="_blank">Z. Barzelay</a>, <a href="https://phherholz.github.io/" target="_blank">P. Herholz</a>, <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a><br/>
+            arXiv 2023<br/>
+            [<a href="https://arxiv.org/pdf/2301.11841">paper</a>] [<a href="https://www.youtube.com/watch?v=s8ZFvdQdMBc&ab_channel=TuurStuyck">video</a>]
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">Pattern-Based Cloth Registration and Sparse-View Animation</span>
+          <div class="item-meta">
+            <a href="https://scholar.google.com/citations?hl=en&user=otORCAkAAAAJ" target="_blank">O. Halimi</a>, <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a>, <a href="https://xiangdonglai.github.io/" target="_blank">D. Xiang</a>, <a href="https://scholar.google.ch/citations?user=oLi7xJ0AAAAJ&hl=en" target="_blank">T. Bagautdinov</a>, <a href="https://www.linkedin.com/in/hewen" target="_blank">H. Wen</a>, <a href="https://scholar.google.com/citations?hl=en&user=yV7LaW8AAAAJ" target="_blank">R. Kimmel</a>, <a href="https://scholar.google.com/citations?hl=en&user=YvS3QpkAAAAJ" target="_blank">T. Shiratori</a>, <a href="https://scholar.google.com/citations?hl=en&user=49ovzE4AAAAJ" target="_blank">C. Wu</a>, <a href="https://scholar.google.com/citations?hl=en&user=Yd4KvooAAAAJ" target="_blank">Y. Sheikh</a>, <a href="https://www.cs.jhu.edu/~fpradan1/" target="_blank">F. Prada</a><br/>
+            ACM Transaction on Graphics (SIGGRAPH Asia 2022)<br/>
+            [<a href="https://arxiv.org/abs/2206.03373">paper</a>]
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">Dressing Avatars: Deep Photorealistic Appearance for Physically Simulated Clothing</span>
+          <div class="item-meta">
+            <a href="https://xiangdonglai.github.io/" target="_blank">D. Xiang</a>, <a href="https://scholar.google.ch/citations?user=oLi7xJ0AAAAJ&hl=en" target="_blank">T. Bagautdinov</a>, <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a>, <a href="https://www.cs.jhu.edu/~fpradan1/" target="_blank">F. Prada</a>, <a href="https://scholar.google.com/citations?user=Wx62iOsAAAAJ&hl=en" target="_blank">J. Romero</a>, <a href="https://scholar.google.com/citations?hl=en&user=vy8xXDQAAAAJ" target="_blank">W. Xu</a>, <a href="https://scholar.google.com/citations?hl=en&user=IolN_okAAAAJ" target="_blank">S. Saito</a>, <a href="https://scholar.google.com/citations?hl=en&user=-PsRtB_TuTQC" target="_blank">J. Guo</a>, <a href="https://scholar.google.com/citations?hl=en&user=ve3Ki9kAAAAJ" target="_blank">B. Smith</a>, <a href="https://scholar.google.com/citations?hl=en&user=YvS3QpkAAAAJ" target="_blank">T. Shiratori</a>, <a href="https://scholar.google.com/citations?hl=en&user=Yd4KvooAAAAJ" target="_blank">Y. Sheikh</a>, <a href="https://scholar.google.com/citations?hl=en&user=vswo4rQAAAAJ" target="_blank">J. Hodgins</a>, <a href="https://scholar.google.com/citations?hl=en&user=49ovzE4AAAAJ" target="_blank">C. Wu</a><br/>
+            ACM Transaction on Graphics (SIGGRAPH Asia 2022)<br/>
+            [<a href="https://arxiv.org/abs/2206.15470">paper</a>] [<a href="https://research.facebook.com/publications/dressing-avatars-deep-photorealistic-appearance-for-physically-simulated-clothing/">Video</a>] [<a href="https://uploadvr.com/meta-avatar-clothes-research/">UploadVR</a>] [<a href="https://80.lv/articles/meta-presented-photorealistic-clothing-for-avatars">80 Level</a>] [<a href="https://www.moguravr.com/meta-avatar-changing-clothes-research/">Mogura VR</a>]
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">Virtual Elastic Objects</span>
+          <div class="item-meta">
+            <a href="https://oden.utexas.edu/people/directory/Hsiao-yu%20Chen/" target="_blank">H. Chen</a>, <a href="https://people.mpi-inf.mpg.de/~tretschk/" target="_blank">E. Tretschk</a>, <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a>, <a href="https://cgg.mff.cuni.cz/~kadlecek/" target="_blank">P. Kadlecek</a>, <a href="https://www.cs.utah.edu/~ladislav/" target="_blank">L. Kavan</a>, <a href="https://www.cs.utexas.edu/users/evouga/" target="_blank">E. Vouga</a>, <a href="https://christophlassner.de/" target="_blank">C. Lassner</a><br/>
+            IEEE Conference on Computer Vision and Pattern Recognition(CVPR) 2022<br/>
+            [<a href="https://arxiv.org/abs/2201.04623">paper</a>] [<a href="https://hsiaoyu.github.io/VEO/">Project page</a>]
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">HVH: Learning a Hybrid Neural Volumetric Representation for Dynamic Hair Performance Capture</span>
+          <div class="item-meta">
+            <a href="https://ziyanw1.github.io/" target="_blank">Z. Wang</a>, <a href="https://sites.google.com/view/gjnam" target="_blank">G. Nam</a>, <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a>, <a href="https://stephenlombardi.github.io/" target="_blank">S. Lombardi</a>, <a href="https://zollhoefer.com/" target="_blank">M. Zollh&ouml;fer</a>, <a href="https://www.cs.cmu.edu/~jkh/" target="_blank">J. Hodgins</a>, <a href="https://christophlassner.de/" target="_blank">C. Lassner</a><br/>
+            IEEE Conference on Computer Vision and Pattern Recognition(CVPR) 2022<br/>
+            [<a href="https://arxiv.org/abs/2112.06904">paper</a>] [<a href="https://ziyanw1.github.io/hvh/">video</a>]
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">Simulating garment with wrinkles based on physics-based cloth simulator and machine learning model</span>
+          <div class="item-meta">
+            <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a>, <a href="https://sites.google.com/site/tony2ng" target="_blank">T. Tung</a><br/>
+            2021 US Patent US10909744B1
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">Cloth Simulation for Computer Graphics</span>
+          <div class="item-meta">
+            <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a><br/>
+            2018 Synthesis Lectures on Visual Computing: Computer Graphics, Animation, Computational Photography, and Imaging.<br/>
+            Morgan &amp; Claypool Publishers.
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">Natural Media Simulation and Art-Directable Simulations for Computer Animation</span>
+          <div class="item-meta">
+            <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a><br/>
+            2017 PhD Thesis.
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">Real-Time Oil Painting on Mobile Hardware</span>
+          <div class="item-meta">
+            <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a>, <a href="http://www.cs.columbia.edu/~fang/" target="_blank">F. Da</a>, <a href="https://sunilhadap.github.io/" target="_blank">S. Hadap</a>, <a href="https://sites.google.com/site/philipdutre/" target="_blank">P. Dutre</a><br/>
+            2017 Computer Graphics Forum.
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">Sculpting Fluids: A New and Intuitive Approach to Art-Directable Fluids</span>
+          <div class="item-meta">
+            <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a>, <a href="https://sites.google.com/site/philipdutre/" target="_blank">P. Dutre</a><br/>
+            2016 Siggraph Poster and Research Competition Presentation<br/>
+            Second place ACM SIGGRAPH Research Competition 2016
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">Model Predictive Control for Art-Directable Fluids</span>
+          <div class="item-meta">
+            <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a>, <a href="https://sites.google.com/site/philipdutre/" target="_blank">P. Dutre</a><br/>
+            2016 Siggraph Poster
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">Digital Painting Classroom: Learning Oil Painting Using a Tablet</span>
+          <div class="item-meta">
+            <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a>, <a href="https://sunilhadap.github.io/" target="_blank">S. Hadap</a>, <a href="https://sites.google.com/site/philipdutre/" target="_blank">P. Dutre</a><br/>
+            2016 Siggraph Short Talk
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-content">
+          <span class="item-title">HR-Kinect-High-Resolution Dynamic 3D Scanning for Facial Expression Analysis</span>
+          <div class="item-meta">
+            <a href="https://tuurstuyck.github.io/" target="_blank"><b>T. Stuyck</b></a>, D. Vandermeulen, D. Smeets, P Claes<br/>
+            2013 Master thesis
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="books">
+      <h3>Books</h3>
+      <div class="item-row">
+        <div class="item-image">
+          <img src="./images/coverstuycksmall.jpg" alt="Cloth Simulation for Computer Graphics book cover" loading="lazy">
+        </div>
+        <div class="item-content">
+          <span class="item-title">Cloth Simulation For Computer Graphics</span>
+          <div class="item-meta">
+            Physics-based animation is commonplace in animated feature films and even special effects for live-action movies. Think about a recent movie and there will be some sort of special effects such as explosions or virtual worlds. Cloth simulation is no different and is ubiquitous because most virtual characters (hopefully!) wear some sort of clothing.<br/><br/>
+            The focus of this book is physics-based cloth simulation. We start by providing background information and discuss a range of applications. This book provides explanations of multiple cloth simulation techniques. More specifically, we start with the most simple explicitly integrated mass-spring model and gradually work our way up to more complex and commonly used implicitly integrated continuum techniques in state-of-the-art implementations. We give an intuitive explanation of the techniques and give additional information on how to efficiently implement them on a computer.<br/><br/>
+            Published by Morgan and Claypool Publishers: <a class="nonblock" href="https://www.morganclaypoolpublishers.com/catalog_Orig/product_info.php?cPath=22&amp;products_id=1295">[link]</a><br/>
+            Buy on Amazon: <a class="nonblock" href="https://www.amazon.com/Cloth-Simulation-Computer-Graphics-Stuyck/dp/1681734117/">[link]</a><br/>
+            Fxguide article:<a class="nonblock" href="https://www.fxguide.com/featured/cloth-simulation-opening-the-kimono/">[link]</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <h3>Work History</h3>
+      
+      <div class="item-row">
+        <div class="item-image">
+          <img src="./images/Meta.png" alt="Meta logo" loading="lazy">
+        </div>
+        <div class="item-content">
+          <span class="item-title">Meta Research</span>
+          <div class="item-meta">
+            <b>Research Scientist, Simulation Lead</b><br/>
+            Simulation technologies for robotics and avatars<br/>
+            2019 F8 Talk [<a class="nonblock" href="https://www.youtube.com/watch?v=FhiAFo9U_sM" target="_blank">link</a>]<br/>
+            2021 Oculus Connect [<a class="nonblock" href="https://www.linkedin.com/posts/tuurstuyck_virtualhumans-avatars-digitalfashion-activity-6860953280483328000-v-xf" target="_blank">link</a>]<br/>
+            2022 Meta Connect [<a class="nonblock" href="https://www.youtube.com/watch?v=r7raHNfPc6A&t=4s&ab_channel=VRTrailers%26Clips" target="_blank">link</a>]<br/>
+            2018 - Present
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-image">
+          <img src="./images/hpg.png" alt="High Performance Graphics logo" loading="lazy">
+        </div>
+        <div class="item-content">
+          <span class="item-title">High Performance Graphics</span>
+          <div class="item-meta">
+            Committee Member 2021 [<a class="nonblock" href="https://www.highperformancegraphics.org/2021/" target="_blank">link</a>]
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-image">
+          <img src="./images/s2019_signature.jpg" alt="SIGGRAPH logo" loading="lazy">
+        </div>
+        <div class="item-content">
+          <span class="item-title">SIGGRAPH</span>
+          <div class="item-meta">
+            SIGGRAPH 2019, 2020<br/>
+            Virtual, Augmented, and Mixed Reality Committee Member<br/>
+            SIGGRAPH 2025<br/>
+            Student Research Competition Chair<br/>
+            SIGGRAPH 2026<br/>
+            Poster Chair
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-image">
+          <img src="./images/pixar-crop-u3759.jpg" alt="Pixar Animation Studios logo" loading="lazy">
+        </div>
+        <div class="item-content">
+          <span class="item-title">Pixar Animation Studios</span>
+          <div class="item-meta">
+            <b>Postdoctoral Research Scientist</b><br/>
+            Space-time Control for Cloth Simulation, 2017-2018<br/><br/>
+            <b>Research Intern (twice)</b><br/>
+            Artistic Control of Cloth Simulations, Jun 2016 - Sep 2016<br/>
+            Space-Time Control for Cloth Simulations, Nov 2016 - Feb 2017
+          </div>
+        </div>
+      </div>
+
+      <div class="item-row">
+        <div class="item-image">
+          <img src="./images/Adobe-logo.png" alt="Adobe logo" loading="lazy">
+        </div>
+        <div class="item-content">
+          <span class="item-title">Adobe</span>
+          <div class="item-meta">
+            <b>Research collaboration</b><br/>
+            Continued collaboration working on research internship project, Aug 2014 - Jan 2016<br/><br/>
+            <b>Research Intern</b><br/>
+            Realistic oil paint simulation on mobile hardware, May 2014 - Aug 2014
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h3>Education</h3>
+      <div class="item-row">
+        <div class="item-image">
+          <img src="./images/kuleuven.jpg" alt="KU Leuven logo" loading="lazy">
+        </div>
+        <div class="item-content">
+          <div class="item-meta">
+            <b>PhD Computer Science, KU Leuven</b><br/>
+            Natural Media Simulation and Art-Directable Simulations for Computer Graphics<br/><br/>
+            <b>Master of Science in Engineering, KU Leuven</b><br/>
+            Mathematical Engineering<br/>
+            Thesis: HR-Kinect - high-resolution dynamic 3D scanning for facial expression analysis<br/><br/>
+            <b>Bachelor of Science in Engineering, KU Leuven</b><br/>
+            Major: Computer Science | Minor: Electrical Engineering
+          </div>
+        </div>
+      </div>
+    </section>
+
   </div>
 </body>
 </html>
